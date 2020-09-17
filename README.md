@@ -1,7 +1,7 @@
 # Slate - Pixel Art Editor
 
 <p align="center">
-  <img src="https://github.com/mitchcurtis/slate/blob/master/app/images/logo/slate-icon-web.svg" />
+  <img src="https://github.com/mitchcurtis/slate/blob/release/app/images/logo/slate-icon-web.svg" />
 </p>
 
 Slate is a bitmap editor available for Linux, Windows and Mac. With Slate, you can:
@@ -43,22 +43,22 @@ Slate was built for pixel art, and its goal is to simplify the creation of sprit
 
 ### Screenshots
 
-![Screenshot of Slate on Linux](https://github.com/mitchcurtis/slate/blob/master/doc/images/slate-v0.1.0-tileset-linux.png "Screenshot of Slate on Linux")
+![Screenshot of Slate on Linux](https://github.com/mitchcurtis/slate/blob/release/doc/images/slate-v0.1.0-tileset-linux.png "Screenshot of Slate on Linux")
 
-![Screenshot of Slate v0.4.0 on Mac](https://github.com/mitchcurtis/slate/blob/master/doc/images/slate-v0.4.0-layers-mac.png "Screenshot of Slate v0.4.0 on Mac")
+![Screenshot of Slate v0.4.0 on Mac](https://github.com/mitchcurtis/slate/blob/release/doc/images/slate-v0.4.0-layers-mac.png "Screenshot of Slate v0.4.0 on Mac")
 
-![Screenshot of Slate v0.4.0 on Mac](https://github.com/mitchcurtis/slate/blob/master/doc/images/slate-v0.4.0-animation-mac.png "Screenshot of Slate v0.4.0 on Mac")
+![Screenshot of Slate v0.4.0 on Mac](https://github.com/mitchcurtis/slate/blob/release/doc/images/slate-v0.4.0-animation-mac.png "Screenshot of Slate v0.4.0 on Mac")
 
 ### Downloads ###
 
-<!-- ![Linux](https://github.com/mitchcurtis/slate/blob/master/doc/images/os-icon-tux.svg "Linux") -->
-<img src="https://github.com/mitchcurtis/slate/blob/master/doc/images/os-icon-tux.svg" width="16" height="16"> - [Slate 0.9.0 for Linux](https://github.com/mitchcurtis/slate/releases/download/v0.9.0/Slate-v0.9.0-linux.tar.xz)
+<!-- ![Linux](https://github.com/mitchcurtis/slate/blob/release/doc/images/os-icon-tux.svg "Linux") -->
+<img src="https://github.com/mitchcurtis/slate/blob/release/doc/images/os-icon-tux.svg" width="16" height="16"> - [Slate 0.9.0 for Linux](https://github.com/mitchcurtis/slate/releases/download/v0.9.0/Slate-v0.9.0-linux.tar.xz)
 
-<!-- ![Mac](https://github.com/mitchcurtis/slate/blob/master/doc/images/os-icon-mac.svg "Mac") -->
-<img src="https://github.com/mitchcurtis/slate/blob/master/doc/images/os-icon-mac.svg" width="16" height="16"> - [Slate 0.9.0 for Mac](https://github.com/mitchcurtis/slate/releases/download/v0.9.0/Slate-v0.9.0-mac.dmg)
+<!-- ![Mac](https://github.com/mitchcurtis/slate/blob/release/doc/images/os-icon-mac.svg "Mac") -->
+<img src="https://github.com/mitchcurtis/slate/blob/release/doc/images/os-icon-mac.svg" width="16" height="16"> - [Slate 0.9.0 for Mac](https://github.com/mitchcurtis/slate/releases/download/v0.9.0/Slate-v0.9.0-mac.dmg)
 
-<!-- ![Windows](https://github.com/mitchcurtis/slate/blob/master/doc/images/os-icon-win.svg "Windows") -->
-<img src="https://github.com/mitchcurtis/slate/blob/master/doc/images/os-icon-win.svg" width="16" height="16"> - [Slate 0.9.0 for Windows](https://github.com/mitchcurtis/slate/releases/download/v0.9.0/Slate-v0.9.0-windows.zip)
+<!-- ![Windows](https://github.com/mitchcurtis/slate/blob/release/doc/images/os-icon-win.svg "Windows") -->
+<img src="https://github.com/mitchcurtis/slate/blob/release/doc/images/os-icon-win.svg" width="16" height="16"> - [Slate 0.9.0 for Windows](https://github.com/mitchcurtis/slate/releases/download/v0.9.0/Slate-v0.9.0-windows.zip)
 
 See the [releases](https://github.com/mitchcurtis/slate/releases) page for the full list of available downloads.
 
@@ -69,7 +69,7 @@ Note that the Linux binaries are built on Ubuntu 18.04.3 and may not work with o
 All Slate builds are portable, meaning that no installation is necessary. On Windows, however, it may be necessary to run the vc_redist.x64.exe file that comes with the download in order to install certain Microsoft C++ libraries if you've never installed any applications that require this prior to running Slate.
 
 ### Documentation ###
-- [Overview](https://github.com/mitchcurtis/slate/blob/master/doc/overview.md)
+- [Overview](https://github.com/mitchcurtis/slate/blob/release/doc/overview.md)
 
 ### Discussion ###
 
@@ -87,11 +87,11 @@ You can also say thank you by donating via [PayPal](https://www.paypal.com/cgi-b
 
 ### Dependencies ###
 
-* Qt 5.13
+* Qt 5.15
 
 ### Cloning ###
 
-`master` is the default branch where all work is done, and is not guaranteed to be stable. I [tag](https://github.com/mitchcurtis/slate/tags) releases, so if you're looking for a stable build to try out, it's best to pick the latest one from `git tag -l`.
+`master` is the branch where development is done, and `release` is the stable branch where releases are made from. I also [tag](https://github.com/mitchcurtis/slate/tags) releases.
 
 ### Building ###
 
@@ -101,7 +101,7 @@ Slate uses Qbs as the primary build system, with experimental CMake support adde
 
 It's recommended to build using Qt Creator for convenience.
 
-Open [slate.qbs](https://github.com/mitchcurtis/slate/blob/master/slate.qbs) in Qt Creator, configure the project using a kit with a Qt version that meets the requirement listed in the [Dependencies](#dependencies) section, and then build it.
+Open [slate.qbs](https://github.com/mitchcurtis/slate/blob/release/slate.qbs) in Qt Creator, configure the project using a kit with a Qt version that meets the requirement listed in the [Dependencies](#dependencies) section, and then build it.
 
 #### Command Line ####
 

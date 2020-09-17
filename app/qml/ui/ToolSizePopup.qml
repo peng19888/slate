@@ -25,6 +25,8 @@ Popup {
             property: "value"
             value: canvas ? canvas.toolSize : 1
             when: canvas
+            // TODO: remove in Qt 6
+            restoreMode: Binding.RestoreBindingOrValue
         }
 
         ToolTip {

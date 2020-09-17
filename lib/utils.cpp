@@ -23,6 +23,7 @@
 #include <QLoggingCategory>
 #include <QPainter>
 #include <QPainterPath>
+#include <QPainterPathStroker>
 #include <QScopeGuard>
 #include <QThread>
 #include <QTransform>

@@ -222,6 +222,8 @@ Dialog {
                             property: "opacity"
                             value: windowOpacitySlider.value
                             when: windowOpacitySlider.pressed
+                            // TODO: remove in Qt 6
+                            restoreMode: Binding.RestoreBindingOrValue
                         }
 
                         ToolTip {

@@ -96,6 +96,8 @@ Panel {
                         property: "contentY"
                         value: autoSwatchGridView.contentYBeforeModelReset
                         when: autoSwatchGridView.lockContentY
+                        // TODO: remove in Qt 6
+                        restoreMode: Binding.RestoreBindingOrValue
                     }
 
                     Connections {

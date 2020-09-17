@@ -1,8 +1,8 @@
 import qbs
-import "../../app/qml/qml.qbs" as AppQmlFiles
+import "../../../app/qml/qml.qbs" as AppQmlFiles
 
 QtGuiApplication {
-    name: "test-app"
+    name: "memory-usage"
 
     Depends { name: "Qt.core" }
     Depends { name: "Qt.qmltest" }
@@ -27,7 +27,7 @@ QtGuiApplication {
     // Ensure that e.g. libslate is found.
     cpp.rpaths: darwin ? ["@loader_path/../Frameworks"] : ["$ORIGIN"]
 
-    cpp.cxxLanguageVersion: "c++17"
+    cpp.cxxLanguageVersion: "c++11"
     // https://bugreports.qt.io/browse/QBS-1434
     cpp.minimumMacosVersion: "10.7"
 
@@ -45,25 +45,25 @@ QtGuiApplication {
     ]
 
     cpp.includePaths: [
-        "../../app",
-        "../shared",
-        "../../lib/3rdparty"
+        "../../../app",
+        "../../shared",
+        "../../../lib/3rdparty"
     ]
 
     files: [
-        "../../app/application.h",
-        "../../app/application.cpp",
-        "../../app/fonts/fonts.qrc",
-        "../../app/images/images.qrc",
-        "../../lib/3rdparty/bitmap/bmp.h",
-        "../../lib/3rdparty/bitmap/bmp.c",
-        "../../lib/3rdparty/bitmap/misc/gif.h",
-        "../../lib/3rdparty/bitmap/misc/gif.c",
-        "resources.qrc",
-        "tst_app.cpp",
-        "../shared/testhelper.h",
-        "../shared/testhelper.cpp",
-        "../shared/testutils.h",
+        "../../../app/application.h",
+        "../../../app/application.cpp",
+        "../../../app/config.qrc",
+        "../../../app/fonts/fonts.qrc",
+        "../../../app/images/images.qrc",
+        "../../../lib/3rdparty/bitmap/bmp.h",
+        "../../../lib/3rdparty/bitmap/bmp.c",
+        "../../../lib/3rdparty/bitmap/misc/gif.h",
+        "../../../lib/3rdparty/bitmap/misc/gif.c",
+        "../../shared/testhelper.h",
+        "../../shared/testhelper.cpp",
+        "../../shared/testutils.h",
+        "memory-usage.cpp",
     ]
 
     AppQmlFiles {}
