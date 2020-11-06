@@ -11,14 +11,22 @@ target_sources(
   3rdparty/bitmap/bmp.h
   3rdparty/bitmap/misc/gif.c
   3rdparty/bitmap/misc/gif.h
+  addanimationcommand.cpp
+  addanimationcommand.h
   addguidecommand.cpp
   addguidecommand.h
   addlayercommand.cpp
   addlayercommand.h
   addnotecommand.cpp
   addnotecommand.h
+  animation.cpp
+  animation.h
+  animationmodel.cpp
+  animationmodel.h
   animationplayback.cpp
   animationplayback.h
+  animationsystem.cpp
+  animationsystem.h
   applicationsettings.cpp
   applicationsettings.h
   applygreedypixelfillcommand.cpp
@@ -47,6 +55,8 @@ target_sources(
   canvaspane.h
   canvaspaneitem.cpp
   canvaspaneitem.h
+  changeanimationordercommand.cpp
+  changeanimationordercommand.h
   changeimagecanvassizecommand.cpp
   changeimagecanvassizecommand.h
   changeimagesizecommand.cpp
@@ -70,6 +80,8 @@ target_sources(
   clipboard.h
   clipboard.cpp
   commands.h
+  deleteanimationcommand.cpp
+  deleteanimationcommand.h
   deleteguidecommand.cpp
   deleteguidecommand.h
   deleteimagecanvasselectioncommand.cpp
@@ -78,6 +90,8 @@ target_sources(
   deletelayercommand.h
   deletenotecommand.cpp
   deletenotecommand.h
+  duplicateanimationcommand.cpp
+  duplicateanimationcommand.h
   duplicatelayercommand.cpp
   duplicatelayercommand.h
   filevalidator.cpp
@@ -110,6 +124,8 @@ target_sources(
   mergelayerscommand.h
   moveguidecommand.cpp
   moveguidecommand.h
+  modifyanimationcommand.cpp
+  modifyanimationcommand.h
   modifyimagecanvasselectioncommand.cpp
   modifyimagecanvasselectioncommand.h
   movelayeredimagecontentscommand.cpp
@@ -130,6 +146,8 @@ target_sources(
   probabilityswatchmodel.h
   project.cpp
   project.h
+  projectanimationhelper.cpp
+  projectanimationhelper.h
   projectimageprovider.cpp
   projectimageprovider.h
   projectmanager.cpp
@@ -181,15 +199,21 @@ target_sources(
   utils.h
 )
 
+find_package(Qt6 COMPONENTS Core)
+find_package(Qt6 COMPONENTS Gui)
+find_package(Qt6 COMPONENTS Qml)
+find_package(Qt6 COMPONENTS Quick)
+find_package(Qt6 COMPONENTS Widgets)
+
 target_link_libraries(
   slate
   PUBLIC
   projectWarning
-  Qt5::Core
-  Qt5::Quick
-  Qt5::Widgets
+  Qt::Core
+  Qt::Quick
+  Qt::Widgets
   PRIVATE
-  Qt5::Gui
+  Qt::Gui
 )
 
 target_include_directories(
