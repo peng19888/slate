@@ -1,7 +1,6 @@
 # lib/CMakeLists.txt
 add_library(
   slate
-  STATIC
 )
 
 target_sources(
@@ -225,19 +224,29 @@ target_include_directories(
   ${CMAKE_CURRENT_SOURCE_DIR}/3rdparty
 )
 
+target_compile_definitions(
+  slate
+  PRIVATE
+  SLATE_LIBRARY
+)
+
 set_target_properties(
   slate
   PROPERTIES
   CXX_EXTENSIONS FALSE
   CXX_STANDARD 11
   CXX_STANDARD_REQUIRED TRUE
+  QT_QML_MODULE_VERSION 1.0
+  QT_QML_MODULE_URI App
 )
 
-target_compile_definitions(
-  slate
-  PRIVATE
-  SLATE_LIBRARY
-)
+#qt6_add_qml_module(
+#    slate
+#    VERSION 1.0
+#    URI "App"
+#)
+
+qt6_qml_type_registration(slate)
 
 # Generate vcs-repo-state.h
 if(EXISTS ${CMAKE_SOURCE_DIR}/.git)
